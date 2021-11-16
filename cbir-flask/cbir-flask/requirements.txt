@@ -21,7 +21,3 @@ scipy==1.7.1
 six==1.16.0
 tifffile==2021.11.2
 Werkzeug==2.0.2
-h5py==2.10.0
-Keras
-Flask-WTF
-tensorflow
