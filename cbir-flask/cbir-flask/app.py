@@ -30,7 +30,7 @@ def hellow_world():
 @app.route('/predict', methods=['POST'])
 def predict():
     chosen_model = request.form['select_model']
-    model_dict = {'Alexnet'   :   '/cbir-flask/static/Model/Alexnet.h5',
+    model_dict = {'Alexnet'   :   '/cbir-flask/static/Model/CNN.h5',
                   'CNN'     :   '/cbir-flask/static/Model/CNN.h5',}
     if chosen_model in model_dict:
         model = load_model(model_dict[chosen_model]) 
