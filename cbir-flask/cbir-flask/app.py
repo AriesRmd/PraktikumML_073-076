@@ -9,7 +9,7 @@ from tensorflow.keras.models import model_from_json
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app = Flask(__name__)
-UPLOAD_FOLDER = '/cbir-flask/static/uploads/'
+UPLOAD_FOLDER = '/cbir-flask/cbir-flask/static/uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
 #Flask Config
@@ -30,8 +30,8 @@ def hellow_world():
 @app.route('/predict', methods=['POST'])
 def predict():
     chosen_model = request.form['select_model']
-    model_dict = {'Alexnet'   :   '/cbir-flask/static/Model/CNN.h5',
-                  'CNN'     :   '/cbir-flask/static/Model/CNN.h5',}
+    model_dict = {'Alexnet'   :   '/cbir-flask/cbir-flask/static/Model/CNN.h5',
+                  'CNN'     :   '/cbir-flask/cbir-flask/static/Model/CNN.h5',}
     if chosen_model in model_dict:
         model = load_model(model_dict[chosen_model]) 
     else:
